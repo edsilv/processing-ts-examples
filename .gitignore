@@ -3,3 +3,4 @@
 *.min.map
 !js/*.js
 !**/build/*.js
+*.ts
