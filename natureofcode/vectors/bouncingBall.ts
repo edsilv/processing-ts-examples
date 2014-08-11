@@ -21,13 +21,21 @@ class BouncingBall extends Sketch{
 
 		if ((this.position.x > width) || (this.position.x < 0)) {
 			this.velocity.x = this.velocity.x * -1;
-            this.audio.bleep(440);
-            this.audio.playNote();
+            this.audio.playNote({
+                frequency: 440,
+                volume: 0.3
+
+            });
+
 		}
 
 		if ((this.position.y > height) || (this.position.y < 0)) {
 			this.velocity.y = this.velocity.y * -1;
-            this.audio.bleep(660);
+
+            this.audio.playNote({
+                frequency: 220,
+                volume: 0.3
+            });
 		}
 
 		fill(0);
