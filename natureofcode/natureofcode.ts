@@ -68,6 +68,7 @@ require([
 
         $('#sketch').on('change', function() {
             var selected = $('#sketch option:selected').val();
+            sketch.destroy();
             sketch = eval("new " + selected + "()");
         });
 
